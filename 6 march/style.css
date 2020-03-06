@@ -1,0 +1,128 @@
+.top{
+	background-image: url("img/8.jpg");
+	height: 125px;
+
+}
+.navbar,.top,.form{
+	width: 100%;
+
+}
+.navbar .active{
+	background-color: skyblue;
+}
+.logo{
+	margin-left: 5%;
+	width: 30%;
+	color: white;
+	}
+a.log{
+	text-decoration: none;
+}
+.logo,.login{
+	
+	text-align: center;
+}
+.logo,.login, .btn{
+	padding:10px;
+}
+.login, .top .search-container {
+	float: right;
+	margin-right: 5%;
+}
+.login{
+	width: 10%;
+	color: black;
+	background-color: white;
+	margin-top: 10px;
+}
+.login,.form{
+		border:1px solid black;
+}
+.top input[type=text],.form input[type=text],.form input[type=email],.form textarea,.form select,.form input[type=checkbox] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+}
+
+.top .search-container button,.form button {
+  padding: 6px 10px;
+  margin-top: 8px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+.top .search-container button{
+	float: right;
+}
+.form button{
+	margin-left: 110px;
+}
+.top .search-container button:hover,.form button:hover {
+  background: #ccc;
+}
+.btn{
+	width: 24.40%;
+}
+a .btn:hover, a .btn:active{
+	background-color: skyblue;
+}
+
+.btn, .image, .sidebar,.content,.form{
+	margin-top: 10px;
+}
+
+.sidebar{
+	width: 18%;
+	height: 500px;
+	float: left;
+}
+ul li{
+	list-style: none;
+	padding: 25px;
+	background-color: #33b5e5;
+	color:black ;
+	margin-right: 20px;
+	text-align: center;
+	font-size: 1.3em;
+	width: 100%;
+	margin-bottom: 7px;
+}
+ul li:hover{
+	background-color: #0099cc;
+	color: white;
+}
+
+.content,.image{
+	width: 80%;
+	float: left;
+}
+
+.content div{
+	width: 45%;
+	float: left;
+	margin-left: 5%;
+}
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .sidebar,.image,.content{
+    width: 100%;
+  }
+  .sidebar{
+  	padding: 15px;
+  }
+  .logo{
+  	font-size: 1.2em;
+  	width: 20%;
+  }
+
+}
+.form{
+	height: 550px;
+	background-color: #ccc;
+}
+.form form{
+	margin-left: 40%;
+	margin-top: 20px;
+}

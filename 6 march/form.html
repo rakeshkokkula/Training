@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<div class="top">
+	<a href="#"><p class="login">Login</p></a>
+	<a href="index.html" class="log"><h1 class="logo">Dream Courses</h1></a>
+	<div class="search-container">
+		<form>
+		<!-- <input class="search" type="text" name="search" placeholder="Search"> -->
+			<input type="text" placeholder="Search" name="search">
+     	 	<button type="submit"><i class="fa fa-search"></i></button>
+		</form>
+	</div>
+</div>
+<div class="navbar">
+	<a href=""><button class="btn active">Registration</button></a>
+	<a href="#"><button class="btn">Button 2</button></a>
+	<a href="#"><button class="btn">Button 3</button></a>
+	<a href="#"><button class="btn">Button 4</button></a>
+</div>
+<div class="form">
+	<form name = "myForm" onsubmit = "return(validate());">
+		<label>Name:</label>
+		<input type="text" name="name" required><br>
+		<label>Course</label>
+		<select required>
+			<option>AWS</option>
+			<option>HTML</option>
+			<option>CSS</option>
+			<option>JavaScript</option>
+			<option>React.js</option>
+			<option>Node.js</option>
+		</select><br>
+		<label>Email:</label>
+		<input type="email" name="email" required><br>
+		<input id="id1" type="checkbox" name="check">Join Immediately
+		<input id="id2" type="checkbox" name="check">Join later <br>
+		<p id="valid"></p>
+		<input type="checkbox" name="checkbox3">Subscribe to our News<br>
+		<!-- <label>Notes</label><br> -->
+		<textarea name="notes" rows="10" cols="30" placeholder="Notes" required></textarea><br>
+		<button type="submit">Submit</button>
+	</form>
+</div>
+<script src="index.js"></script>
+</body>
+</html>
