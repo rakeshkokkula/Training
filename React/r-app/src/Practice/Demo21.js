@@ -1,12 +1,8 @@
 import React from 'react'; 
 
-import ReactDOM from 'react-dom'; 
-
-  
-
 // sample component to illustrate props 
 
-class DemoComponent extends React.Component{ 
+class Demo extends React.Component{ 
 
     render(){ 
 
@@ -20,7 +16,7 @@ class DemoComponent extends React.Component{
 
                     <h2>Hello {this.props.user}</h2> 
 
-                    <h3>Welcome to GeeksforGeeks</h3> 
+                    <h3>Welcome to My World!!</h3> 
 
                 </div> 
 
@@ -29,15 +25,4 @@ class DemoComponent extends React.Component{
     } 
 
 } 
-
-  
-
-ReactDOM.render( 
-
-    // passing props 
-
-    <DemoComponent user = "Harsh Agarwal" />,  
-
-    document.getElementById("root") 
-
-);
+export default Demo

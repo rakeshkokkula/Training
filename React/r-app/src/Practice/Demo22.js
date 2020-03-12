@@ -1,9 +1,5 @@
 import React from 'react'; 
 
-import ReactDOM from 'react-dom'; 
-
-  
-
 // Component 
 
 class ExampleClass extends React.Component{ 
@@ -34,16 +30,7 @@ class ExampleClass extends React.Component{
 
 ExampleClass.defaultProps = { 
 
-    title: "GeeksforGeeks"
+    title: "TechStriker"
 
 } 
-
-  
-
-ReactDOM.render( 
-
-    <ExampleClass />,  
-
-    document.getElementById("root") 
-
-);
+export default ExampleClass

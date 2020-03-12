@@ -1,5 +1,4 @@
 import React from 'react'; 
-import ReactDOM from 'react-dom'; 
   
 // Navbar Component 
 function Navbar() 
@@ -8,9 +7,7 @@ function Navbar()
 } 
   
 // Sidebar Component 
-function Sidebar() {
-    
-} { 
+function Sidebar()  { 
     return <h1>This is Sidebar.</h1> 
 } 
   
@@ -32,7 +29,4 @@ function App()
         ); 
 } 
   
-ReactDOM.render( 
-    <App />,  
-    document.getElementById("root") 
-);
+export default App

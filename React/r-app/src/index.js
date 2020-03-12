@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import List from './Practice/Demo1.js'
+import ExampleClass from './Practice/Demo24.js'
 
 
 
 
-ReactDOM.render(<List />, document.getElementById('root'));
+ReactDOM.render(<ExampleClass/>, document.getElementById('root'));
 
 

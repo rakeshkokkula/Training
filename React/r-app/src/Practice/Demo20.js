@@ -1,12 +1,8 @@
 import React from 'react'; 
 
-import ReactDOM from 'react-dom'; 
-
-  
-
 // functional component to illustrate props 
 
-function DemoComponent(props){ 
+function Demo(props){ 
 
     return( 
 
@@ -16,22 +12,11 @@ function DemoComponent(props){
 
             <h2>Hello {props.user}</h2> 
 
-            <h3>Welcome to GeeksforGeeks</h3> 
+            <h3>Welcome to My World</h3> 
 
          </div> 
 
     ); 
 
 } 
-
-  
-
-ReactDOM.render( 
-
-    // passing props 
-
-    <DemoComponent user = "Harsh Agarwal" />,  
-
-    document.getElementById("root") 
-
-);
+export default Demo

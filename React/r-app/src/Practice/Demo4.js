@@ -1,3 +1,5 @@
+import React from 'react';
+
 // simple rendering with fragments 
 class Columns extends React.Component { 
     render() { 
@@ -9,3 +11,4 @@ class Columns extends React.Component {
       ); 
     } 
   }
+  export default Columns

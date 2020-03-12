@@ -1,9 +1,5 @@
 import React from 'react'; 
 
-import ReactDOM from 'react-dom'; 
-
-  
-
 // Parent Component 
 
 class Parent extends React.Component{ 
@@ -16,7 +12,7 @@ class Parent extends React.Component{
 
                     <h2>You are inside Parent Component</h2> 
 
-                    <Child name="User" userId = "5555"/> 
+                    <Child name="Raki" userId = "1620"/> 
 
                 </div> 
 
@@ -25,8 +21,6 @@ class Parent extends React.Component{
     } 
 
 } 
-
-  
 
 // Child Component 
 
@@ -51,15 +45,4 @@ class Child extends React.Component{
     } 
 
 } 
-
-  
-
-ReactDOM.render( 
-
-    // passing props 
-
-    <Parent />,  
-
-    document.getElementById("root") 
-
-);
+export default Parent

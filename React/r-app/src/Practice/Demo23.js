@@ -1,11 +1,5 @@
 import React from 'react'; 
 
-import ReactDOM from 'react-dom'; 
-
-  
-
-// Component 
-
 class ExampleClass extends React.Component{ 
 
     render(){ 
@@ -35,13 +29,4 @@ ExampleClass.defaultProps = {
     names: ['Ram', 'Shyam', 'Raghav'] 
 
 } 
-
-  
-
-ReactDOM.render( 
-
-    <ExampleClass />,  
-
-    document.getElementById("root") 
-
-);
+export default ExampleClass

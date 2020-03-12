@@ -1,5 +1,5 @@
 import React from 'react'; 
-import ReactDOM from 'react-dom'; 
+
   
 function Form() 
 { 
@@ -15,8 +15,4 @@ function Form()
         </div> 
     ); 
 } 
-  
-ReactDOM.render( 
-    <Form />, 
-    document.getElementById("root") 
-);
+export default Form

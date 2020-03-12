@@ -1,11 +1,11 @@
 import React from 'react'; 
-import ReactDOM from 'react-dom'; 
+
   
 class Test extends React.Component { 
     constructor(props) 
     { 
         super(props); 
-        this.state = { hello : "World!" }; 
+        this.state = { hello : "Kumar" }; 
     } 
   
     componentWillMount() 
@@ -20,14 +20,14 @@ class Test extends React.Component {
   
     changeState() 
     { 
-        this.setState({ hello : "Geek!" }); 
+        this.setState({ hello : "Kokkula" }); 
     } 
   
     render() 
     { 
         return ( 
             <div> 
-            <h1>GeeksForGeeks.org, Hello{ this.state.hello }</h1> 
+            <h1>Hello Rakesh { this.state.hello }</h1> 
             <h2> 
              <a onClick={this.changeState.bind(this)}>Press Here!</a> 
             </h2> 
@@ -51,6 +51,4 @@ class Test extends React.Component {
     } 
 } 
   
-ReactDOM.render( 
-    <Test />, 
-    document.getElementById('root'));
+export default Test

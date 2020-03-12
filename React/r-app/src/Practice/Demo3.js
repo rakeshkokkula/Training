@@ -1,5 +1,5 @@
 import React from 'react'; 
-import ReactDOM from 'react-dom'; 
+
   
 // Component that will return an 
 // unordered list 
@@ -22,7 +22,9 @@ function Navmenu(props)
   
 const menuItems = [1,2,3,4,5]; 
   
-ReactDOM.render( 
-    <Navmenu menuitems = {menuItems} />,  
-    document.getElementById('root') 
-);
+function Nav(){
+    return (
+        <Navmenu menuitems = {menuItems} />
+    )
+}
+    export default Nav

@@ -1,5 +1,5 @@
 import React from 'react'; 
-import ReactDOM from 'react-dom'; 
+
   
 class Clock extends React.Component { 
     constructor(props) 
@@ -43,7 +43,5 @@ class Clock extends React.Component {
     ); 
   } 
 } 
-  
-ReactDOM.render( 
-  <Clock title="GeeksforGeeks" />, 
-            document.getElementById('root'));
+
+export default Clock
