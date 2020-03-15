@@ -15,12 +15,12 @@ class Mainpage extends React.Component{
                     <div className='col-sm-3'>
                         <div className="right">
                         <ul>
-                            <a href=""><li>HTML</li></a>
-                            <a href=""><li>CSS</li></a>
-                            <a href=""><li>JavaScript</li></a>
-                            <a href=""><li>React</li></a>
-                            <a href=""><li>Node js</li></a>
-                            <a href=""><li>Angular</li></a>
+                            <a href=""><li><img src="https://img.icons8.com/color/48/000000/html-5.png"/> HTML</li></a>
+                            <a href=""><li><img src="https://img.icons8.com/color/48/000000/css3.png"/> CSS</li></a>
+                            <a href=""><li><img src="https://img.icons8.com/color/48/000000/javascript.png"/> JavaScript</li></a>
+                            <a href=""><li><img src="https://img.icons8.com/color/48/000000/react-native.png"/> React</li></a>
+                            <a href=""><li><img src="https://img.icons8.com/color/48/000000/nodejs.png"/> Node js</li></a>
+                            <a href=""><li><img src="https://img.icons8.com/color/48/000000/angularjs.png"/> Angular</li></a>
                         </ul>
                         </div>
                     </div>
@@ -51,8 +51,10 @@ class Mainpage extends React.Component{
                     </div>
                     <div className='col-sm-3'>
                         <h2>References</h2>
-                        <a href="https://www.w3schools.com">https://www.w3schools.com</a>
-                        <a href="https://react-bootstrap.netlify.com">https://react-bootstrap.netlify.com</a>
+                        <a className='reference' href="https://www.w3schools.com">https://www.w3schools.com</a><br />
+                        <a className='reference' href="https://www.reactjs.org">https://www.reactjs.org</a><br />
+                        <a className='reference' href="https://www.javatpoint.com">https://www.javatpoint.com</a><br />
+                        <a className='reference' href="https://react-bootstrap.netlify.com">https://react-bootstrap.netlify.com</a>
                     </div>
                 </div>
                 

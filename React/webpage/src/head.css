@@ -24,8 +24,8 @@ a,a:hover{
 }
 ul li{
 	list-style: none;
-	padding: 20px;
-	background-color: #33b5e5;
+	padding: 10px;
+	background-color: #0eb933;
 	color:black ;
 	margin-right: 20px;
 	text-align: center;
@@ -55,6 +55,7 @@ ul li:hover{
   .content{
       margin-left: 10px;
       margin-right: 10px;
+      margin-top: 20px;
   }
   .footer{
       background-color: #474e5d;
@@ -72,4 +73,11 @@ ul li:hover{
   }
  .bt{
      width: 150px;
+ }
+ a.reference{
+    color: rgb(253, 124, 2);
+    margin-left: 40px;
+ }
+ h2{
+     text-align: center;
  }

@@ -23,7 +23,7 @@ function Form(){
 		<input type="checkbox" name="join" /> Join later <br/>
 		<input type="checkbox" name="checkbox" /> Subscribe to our News<br/>
 		<textarea name="notes" rows="5" cols="30" placeholder="Notes" required></textarea><br/>
-		<button type="submit" value="submit" className='btn btn-primary bt'>Submit</button>
+		<button type="submit" value="submit" className='btn btn-success bt'>Submit</button>
 	</form>
     </div>
     </div>

@@ -10,10 +10,10 @@ class Header extends React.Component{
             <div className="header">
             <div className="row top">
                 <div className="col-sm-6 col-4">
-                <Link to="/" className='log'><h1 className="logo">Dream Courses</h1></Link>
+                <Link to="/" className='log'><h1 className="logo"><img src="https://img.icons8.com/color/58/000000/unicorn.png"/> Dream Courses</h1></Link>
                 </div>
                 <div className="col-sm-6 col-8">
-                    <a href="#" className="log"><p className="login">Login</p></a>
+                    <a href="" className="log"><p className="login">Login</p></a>
                     <form class="form">
                         <input type="text" placeholder="Search" name="search" />
                         <button type="submit"><i class="fa fa-search"></i></button>
@@ -22,16 +22,16 @@ class Header extends React.Component{
             </div>
             <div className="row">
                 <div className="col-sm-3">
-                <Link to="/Registration.js"><button className="btn btn-primary">Registration</button></Link>
+                <Link to="/Registration.js"><button className="btn btn-success"><img src="https://img.icons8.com/windows/38/000000/edit-user-male--v1.png"/> Registration</button></Link>
                 </div>
                 <div className="col-sm-3">
-                <a href=""><button className="btn btn-primary">Button 2</button></a>
+                <a href=""><button className="btn btn-success"><img src="https://img.icons8.com/color/38/000000/e-learning.png"/> Tutorials</button></a>
                 </div>
                 <div className="col-sm-3">
-                <a href=""><button className="btn btn-primary">Button 3</button></a>
+                <a href=""><button className="btn btn-success"><img src="https://img.icons8.com/color/38/000000/courses.png"/> Courses offered</button></a>
                 </div>
                 <div className="col-sm-3">
-                <a href=""><button className="btn btn-primary">Button 4</button></a>
+                <a href=""><button className="btn btn-success"><img src="https://img.icons8.com/color/38/000000/business-contact.png"/> Contact Us</button></a>
                 </div>
             </div>
             </div>
