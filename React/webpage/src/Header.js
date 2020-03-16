@@ -10,10 +10,10 @@ class Header extends React.Component{
             <div className="header">
             <div className="row top">
                 <div className="col-sm-6 col-4">
-                <Link to="/" className='log'><h1 className="logo"><img src="https://img.icons8.com/color/58/000000/unicorn.png"/> Dream Courses</h1></Link>
+                <Link to="/"><h1 className="logo"><img src="https://img.icons8.com/color/58/000000/unicorn.png"/> Dream Courses</h1></Link>
                 </div>
                 <div className="col-sm-6 col-8">
-                    <a href="" className="log"><p className="login">Login</p></a>
+                    <a href=""><p className="login">Login</p></a>
                     <form class="form">
                         <input type="text" placeholder="Search" name="search" />
                         <button type="submit"><i class="fa fa-search"></i></button>

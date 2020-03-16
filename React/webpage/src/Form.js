@@ -19,6 +19,8 @@ function Form(){
 		</select><br/>
 		<label>Email ID: </label>
 		<input type="email" name="email" required /><br/>
+		<label>Mobile No: </label>
+		<input type="number" name="mobile" required /> <br />
 		<input type="checkbox" name="join" /> Join Immediately {" "}
 		<input type="checkbox" name="join" /> Join later <br/>
 		<input type="checkbox" name="checkbox" /> Subscribe to our News<br/>
