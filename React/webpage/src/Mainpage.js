@@ -77,10 +77,6 @@ function ControlledCarousel() {
             src="https://cdn.pixabay.com/photo/2018/05/18/15/30/webdesign-3411373_960_720.jpg"
             alt="First slide"
           />
-          <Carousel.Caption>
-            <h3>First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-          </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <img
@@ -88,11 +84,6 @@ function ControlledCarousel() {
             src="https://cdn.pixabay.com/photo/2018/05/04/20/01/website-3374825_960_720.jpg"
             alt="Second slide"
           />
-  
-          <Carousel.Caption>
-            <h3>Second slide label</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <img
@@ -100,13 +91,6 @@ function ControlledCarousel() {
             src="https://cdn.pixabay.com/photo/2019/03/16/22/06/sitemap-4059862_960_720.jpg"
             alt="Third slide"
           />
-  
-          <Carousel.Caption>
-            <h3>Third slide label</h3>
-            <p>
-              Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-            </p>
-          </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
     );
