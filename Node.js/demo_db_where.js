@@ -9,10 +9,8 @@ var con = mysql.createConnection({
 
 con.connect(function(err) {
   if (err) throw err;
-  console.log("Connected!");
-  var sql = "ALTER TABLE demo ADD COLUMN id INT AUTO_INCREMENT PRIMARY KEY";
-  con.query(sql, function (err, result) {
+  con.query("SELECT * FROM demo WHERE address = 'Park Lane 38'", function (err, result) {
     if (err) throw err;
-    console.log("Table altered");
+    console.log(result);
   });
 });

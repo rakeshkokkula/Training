@@ -9,10 +9,9 @@ var con = mysql.createConnection({
 
 con.connect(function(err) {
   if (err) throw err;
-  console.log("Connected!");
-  var sql = "ALTER TABLE demo ADD COLUMN id INT AUTO_INCREMENT PRIMARY KEY";
+  var sql = "DELETE FROM demo WHERE address = 'Mountain 21'";
   con.query(sql, function (err, result) {
     if (err) throw err;
-    console.log("Table altered");
+    console.log("Number of records deleted: " + result.affectedRows);
   });
 });
