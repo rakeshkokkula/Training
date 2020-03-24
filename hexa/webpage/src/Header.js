@@ -22,7 +22,7 @@ class Header extends React.Component{
             </div>
             <div className="row">
                 <div className="col-sm-3">
-                <Link to="/Registration.js"><button className="btn btn-success"><img src="https://img.icons8.com/windows/38/000000/edit-user-male--v1.png"/> Registration</button></Link>
+                <Link to="/Registration"><button className="btn btn-success"><img src="https://img.icons8.com/windows/38/000000/edit-user-male--v1.png"/> Registration</button></Link>
                 </div>
                 <div className="col-sm-3">
                 <a href=""><button className="btn btn-success"><img src="https://img.icons8.com/color/38/000000/e-learning.png"/> Tutorials</button></a>

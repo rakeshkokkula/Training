@@ -1,82 +1,59 @@
-import React, { Component } from 'react';
+import React from 'react';
 import axios from 'axios';
-// import Zoom from 'react-reveal/Zoom';
-// import Flip from 'react-reveal/Flip'
 
-class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      dataku: [],
-    };
-}
+class Data extends React.Component {
+ constructor(props) {
+  super(props)
+         this.state = {
+          persons: []
+         }
+        }
 
-klikPost(e){
-  e.preventDefault();
-  var url = 'http://localhost:4000/data';
-  axios.post(url, {
-    nama: this.inputnama.value,
-    usia: this.inputusia.value
-  })
-  .then(function (response) {
-    console.log(response);
-  })
-  .catch(function (error) {
-    console.log(error);
-  });
-  this.inputnama.value = '';
-  this.inputusia.value = '';
-};
-
-klikGet(e){
-  e.preventDefault();
-  var url = 'http://localhost:4000/data';
-  axios.get(url)
-  .then((ambilData) => {
-    console.log(ambilData.data);
-    this.setState({
-      dataku: ambilData.data,
-    }) 
-  })
-};
-
-render() {
-  const dataMySQL = this.state.dataku.map((item, index)=>{
-    var arrayku = ['Nama: ',item.Nama,', Usia: ', item.Usia, ' th.'].join(' ');
-    return <p key={index}>{arrayku}</p>;
-  })
-  return (
-   <div className="container">
-  
-     <form>
-
-  <div className="form-group" style={{margin:'15px'}}>
-    <input className="form-control" type="text" id="nama" 
-    ref={ innama => this.inputnama = innama }
-    placeholder="Input nama di sini!"/>
-  </div>
-
-  <div className="form-group" style={{margin:'15px'}}>
-    <input className="form-control" type="number" id="usia" 
-    ref={ inusia => this.inputusia = inusia }
-    placeholder="Input usia di sini!"/>
-  </div>
-  
-  <button className="btn btn-primary" style={{width:'100px'}}
-  onClick={this.klikPost.bind(this)}>POST</button>
-  
-  <button className="btn btn-success" style={{margin:'15px',width:'100px'}}
-  onClick={this.klikGet.bind(this)}>GET</button>
-
-</form>
-
-     <div>
-       { dataMySQL }
-     </div>
-  
-   </div>
+  componentDidMount() {
+    axios.get(`http://localhost:4000/data`)
+      .then(res => {
+        const persons = res.data;
+        this.setState({ persons });
+      })
+  }  
+  render() {
+    return (
+    <div className="App">
+       <div className="left">
+       <table>
+        <tr>
+          <th>Name</th>
+          <th>Phone</th>
+          <th>Email</th>
+          <th>Job</th>
+          <th>Company</th>
+          <th>Age</th>
+          <th>City</th>
+          <th>Action</th>
+        </tr>
+        { this.state.persons.map(person => 
+          <tr>
+            <td>{person.name}</td>
+            <td>{person.phone}</td>
+            <td>{person.email}</td>
+            <td>{person.job}</td>
+            <td>{person.company}</td>
+            <td>{person.age}</td>
+            <td>{person.city}</td>
+            <td>
+              <form onSubmit={this.handleEditSubmit}>
+                  <button type="submit" value={person.id} onClick={e => this.onEdit(e)}>Edit</button>
+              </form>
+               <form onSubmit={this.handleSubmit}>
+                  <button type="submit" value={person.id} onClick={e => this.onClick(e)}>Delete</button>
+              </form>
+              
+            </td>
+            </tr>
+          )}
+        </table>
+      </div>    </div>
   );
- }
- }
- 
-export default App;
+  }
+}
+export default Data;

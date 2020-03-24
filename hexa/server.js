@@ -47,13 +47,10 @@ app.use(function(req, res, next) {
     });
   });
 
-  app.get('/data',(req, res) => {
-    
-    let sql = "SELECT * FROM users";
-    let query = connection.query(sql,(err, results) => {
-      if(err) throw err;
-      res.send(results)
-      console.log('Saved')
-      res.redirect('/');
-    });
-  });
+      //route for get data
+      app.get('/data', function (req, res) {
+        connection.query('select * from users', function (error, results, fields) {
+        if (error) throw error;
+        res.end(JSON.stringify(results));
+      });
+     });

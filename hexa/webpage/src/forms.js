@@ -1,6 +1,7 @@
 import React from 'react'
 import axios from 'axios';
 import './head.css'
+import {Link } from "react-router-dom";
 
 
 class Form extends React.Component {
@@ -46,18 +47,7 @@ class Form extends React.Component {
         })         
     
   }  
-  klikGet(e){
-    e.preventDefault();
-    var url = 'http://localhost:4000/data';
-    axios.get(url)
-    .then((getData) => {
-      console.log(getData.data);
-      this.setState({
-        users: getData.data,
-      }) 
-    })
-  };
-  
+
     render() {
       return (
         <div className='row registration'>
@@ -135,8 +125,8 @@ class Form extends React.Component {
 </form>
 <hr/>
       <h2>Name:{this.state.name}</h2>
-      <button className="btn btn-success" style={{margin:'15px',width:'100px'}}
-  onClick={this.klikGet.bind(this)}>GET</button>
+      <Link to="/getData"><button className="btn btn-success" style={{margin:'15px',width:'100px'}}
+  >GET</button></Link>
   <div>{this.users}</div>
 </div>
 </div>
