@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import Table from 'react-bootstrap/Table'
 
 class Data extends React.Component {
  constructor(props) {
@@ -16,11 +17,15 @@ class Data extends React.Component {
         this.setState({ persons });
       })
   }  
+
+
+
+
   render() {
     return (
     <div className="App">
        <div className="left">
-       <table>
+       <Table striped bordered hover>
         <tr>
           <th>Name</th>
           <th>Phone</th>
@@ -51,7 +56,7 @@ class Data extends React.Component {
             </td>
             </tr>
           )}
-        </table>
+        </Table>
       </div>    </div>
   );
   }

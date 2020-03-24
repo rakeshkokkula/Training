@@ -68,6 +68,7 @@ class Form extends React.Component {
         required 
         value={this.state.course}
         onChange={this.handleInputChange}>
+        <option value="">Select Course</option>
         <option value="AWS">AWS</option>
         <option value="HTML">HTML</option>
         <option value="CSS">CSS</option>
