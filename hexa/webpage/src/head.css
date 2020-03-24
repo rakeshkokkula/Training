@@ -1,0 +1,83 @@
+.form{
+    margin-left: 50%;;
+}
+.login{
+    margin-left: 60%;
+    margin-top: 10px;
+}
+.logo{
+    margin-left: 10%;
+    margin-top: 30px;;
+}
+.btn{
+    width: 100%;
+    margin-top: 10px;;
+    margin-bottom: 10px;
+}
+a,a:hover{
+    text-decoration: none;
+    color: white;
+}
+.top{
+    background-image: url("assets/img/8.jpg");
+    height: 125px;
+}
+ul li{
+	list-style: none;
+	padding: 10px;
+	background-color: #0eb933;
+	color:white ;
+	margin-right: 20px;
+	text-align: center;
+	font-size: 1.3em;
+	width: 90%;
+	margin-bottom: 7px;
+}
+ul li:hover{
+	background-color: #0099cc;
+	color: white;
+}
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    .logo{
+        font-size: 1.5em;
+    }
+    .login{
+        margin-left: 40%;
+    }
+    .form{
+        margin-left: 10%;
+    }
+  .forms{
+      margin-left: 0;
+  }
+  }
+  .content{
+      margin-left: 10px;
+      margin-right: 10px;
+      margin-top: 20px;
+  }
+  .footer{
+      background-color: #474e5d;
+      color: white;
+      text-align: center;
+  }
+  .registration{
+    text-align: center;
+      background-color: #ccc;
+  }
+  .forms{
+      margin-top: 20px;
+      margin-bottom: 20px;
+      
+  }
+ .bt{
+     width: 150px;
+ }
+ a.reference{
+    color: rgb(253, 124, 2);
+    margin-left: 40px;
+ }
+ h2{
+     text-align: center;
+ }
