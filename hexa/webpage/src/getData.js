@@ -17,7 +17,37 @@ class Data extends React.Component {
         this.setState({ persons });
       })
   }  
+  // onEdit(e){
+  //   e.preventDefault();
+  //   const data = {
+  //     ID: this.state.ID,
+  //     name: this.state.name,
+  //     course: this.state.course,
+  //     email: this.state.email,
+  //     mobile: this.state.mobile,
+  //     joinImmediately: this.state.joinImmediately,
+  //     joinLater: this.state.joinLater,
+  //     subscribe: this.state.subscribe,
+  //     notes: this.state.notes
+  //   }
+  //   axios.put('http://localhost:4000/put', data)
+    
+  //     .then(res => {
+  //         const persons = res.data;
+  //         this.setState({ persons });
+  //       })
+  // }
 
+  onClick(i,e){
+    // e.preventDefault();
+    const id = this.state.persons[i].ID;
+    console.log(id)
+    axios.delete(`http://localhost:4000/del/${id}`)
+    
+      .then(res => {
+          alert(res);
+        })
+  }
 
 
 
@@ -26,38 +56,48 @@ class Data extends React.Component {
     <div className="App">
        <div className="left">
        <Table striped bordered hover>
+         <thead>
         <tr>
-          <th>Name</th>
-          <th>Phone</th>
+          <th>Id</th>
+          <th>Full Name</th>
+          <th>Course</th>
           <th>Email</th>
-          <th>Job</th>
-          <th>Company</th>
-          <th>Age</th>
-          <th>City</th>
-          <th>Action</th>
+          <th>Mobile No</th>
+          <th>Join_Immediately</th>
+          <th>Join_Later</th>
+          <th>Subscribe</th>
+          <th>Notes</th>
         </tr>
-        { this.state.persons.map(person => 
-          <tr>
+        </thead>
+          
+        { this.state.persons.map((person,i) => 
+          <tr key={person.ID}>
+            <td>{person.ID}</td>
             <td>{person.name}</td>
-            <td>{person.phone}</td>
+            <td>{person.course}</td>
             <td>{person.email}</td>
-            <td>{person.job}</td>
-            <td>{person.company}</td>
-            <td>{person.age}</td>
-            <td>{person.city}</td>
+            <td>{person.mobile}</td>
+            <td>{person.joinImmediately}</td>
+            <td>{person.joinLater}</td>
+            <td>{person.subscribe}</td>
+            <td>{person.notes}</td>
             <td>
+            
               <form onSubmit={this.handleEditSubmit}>
-                  <button type="submit" value={person.id} onClick={e => this.onEdit(e)}>Edit</button>
+                  <button className="btn btn-primary" type="submit" value={person.ID} onClick={e => this.onEdit(e)}>Edit</button>
               </form>
                <form onSubmit={this.handleSubmit}>
-                  <button type="submit" value={person.id} onClick={e => this.onClick(e)}>Delete</button>
+                  <button className="btn btn-danger" type="submit" value={person.ID} onClick={e => this.onClick(i,e)}>Delete</button>
               </form>
               
             </td>
             </tr>
+            
+
           )}
         </Table>
-      </div>    </div>
+      </div>    
+      </div>
   );
   }
 }

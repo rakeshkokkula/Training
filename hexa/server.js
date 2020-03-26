@@ -43,6 +43,7 @@ app.use(function(req, res, next) {
     let query = connection.query(sql, data,(err, results) => {
       if(err) throw err;
       console.log('Saved')
+      res.send(results)
       res.redirect('/');
     });
   });
@@ -54,3 +55,18 @@ app.use(function(req, res, next) {
         res.end(JSON.stringify(results));
       });
      });
+
+
+//rest api to delete record from mysql database
+app.delete('/del/:id', (req, res) => {
+   console.log(req.params.id);
+  
+  const dat = [req.params.id]
+  const del = 'DELETE FROM users WHERE id= ?'
+   connection.query(del, dat, function (error, results, fields) {
+    if (error) throw error;
+    
+    console.log('Deleted Row(s):', results.affectedRows);
+	 res.end('Record has been deleted!');
+	});
+});

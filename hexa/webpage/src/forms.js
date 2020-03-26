@@ -40,6 +40,7 @@ class Form extends React.Component {
         subscribe: this.state.subscribe,
         notes: this.state.notes
       }
+      console.log(data);
       axios.post('http://localhost:4000/sent', data)
       .then(res => {
           const persons = res.data;
