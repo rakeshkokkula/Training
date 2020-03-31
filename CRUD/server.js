@@ -55,7 +55,15 @@ app.use(function(req, res, next) {
         res.end(JSON.stringify(results));
       });
      });
-
+//route for get data
+app.get('/update/:id', (req, res) => {
+  const update = req.params.id
+  console.log(update)
+  connection.query('select * from users where id=?',update, function (error, results, fields) {
+  if (error) throw error;
+  res.end(JSON.stringify(results));
+});
+});
 
 //rest api to delete record from mysql database
 app.delete('/del/:id', (req, res) => {
@@ -65,7 +73,7 @@ app.delete('/del/:id', (req, res) => {
   const del = 'DELETE FROM users WHERE id= ?'
    connection.query(del, dat, function (error, results, fields) {
     if (error) throw error;
-    
+    res.send('Deleted Row(s):', results.affectedRows)
     console.log('Deleted Row(s):', results.affectedRows);
 	 res.end('Record has been deleted!');
 	});

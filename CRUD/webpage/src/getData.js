@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import Table from 'react-bootstrap/Table'
+import {Link } from "react-router-dom";
 
 class Data extends React.Component {
  constructor(props) {
@@ -17,35 +18,16 @@ class Data extends React.Component {
         this.setState({ persons });
       })
   }  
-  // onEdit(e){
-  //   e.preventDefault();
-  //   const data = {
-  //     ID: this.state.ID,
-  //     name: this.state.name,
-  //     course: this.state.course,
-  //     email: this.state.email,
-  //     mobile: this.state.mobile,
-  //     joinImmediately: this.state.joinImmediately,
-  //     joinLater: this.state.joinLater,
-  //     subscribe: this.state.subscribe,
-  //     notes: this.state.notes
-  //   }
-  //   axios.put('http://localhost:4000/put', data)
-    
-  //     .then(res => {
-  //         const persons = res.data;
-  //         this.setState({ persons });
-  //       })
-  // }
+  
 
   onClick(i,e){
-    // e.preventDefault();
+    e.preventDefault();
     const id = this.state.persons[i].ID;
     console.log(id)
     axios.delete(`http://localhost:4000/del/${id}`)
     
       .then(res => {
-          alert(res);
+          alert(res + 'Deleted');
         })
   }
 
@@ -84,9 +66,9 @@ class Data extends React.Component {
             <td>
             
               <form onSubmit={this.handleEditSubmit}>
-                  <button className="btn btn-primary" type="submit" value={person.ID} onClick={e => this.onEdit(e)}>Edit</button>
-              </form>
-               <form onSubmit={this.handleSubmit}>
+              <Link to={`/update/${person.ID}`}>    <button className="btn btn-primary" type="submit">Edit</button></Link>
+              </form >
+               <form onSubmit={this.handleEditSubmit}>
                   <button className="btn btn-danger" type="submit" value={person.ID} onClick={e => this.onClick(i,e)}>Delete</button>
               </form>
               
