@@ -1,0 +1,153 @@
+[
+  {
+    "id"       : "1",
+    "firstname": "Rakesh",
+    "lastname" : "kokkula",
+    "email"    : "rakeshkokkula3@gmail.com",
+    "password" : "9966012923",
+    "contact"  : "9966012923",
+    "address"  : "4-1-140, vani nagar, Jagtial",
+    "comments" : "",
+    "role"     : "admin"
+  },
+  {
+    "id"       : "2",
+    "firstname": "Mukesh",
+    "lastname" : "kokkula",
+    "email"    : "mukeshkokkula@gmail.com",
+    "contact"  : "9494992445",
+    "password"  : "9494992445",
+    "address"  : "4-1-140, vani nagar, Jagtial",
+    "comments" : "",
+    "role"     : "student"
+  },
+  {
+    "id"       : "3",
+    "firstname": "Vinodh",
+    "lastname" : "kokkula",
+    "email"    : "vinodhkokkula@gmail.com",
+    "password" : "9966012923",
+    "contact"  : "8801000623",
+    "address"  : "4-1-140, vani nagar, Jagtial",
+    "comments" : ""
+  },
+  {
+    "id"       : "4",
+    "firstname": "Manoj",
+    "lastname" : "kokkula",
+    "email"    : "manojkokkula@gmail.com",
+    "password" : "9966012923",
+    "contact"  : "9494992446",
+    "address"  : "4-1-140, vani nagar, Jagtial",
+    "comments" : ""
+  },
+  {
+    "id"       : "5",
+    "firstname": "Naresh ",
+    "lastname" : "Hegede",
+    "email"    : "nareshhegede@gmail.com",
+    "password" : "9966012923",
+    "contact"  : "02228254144",
+    "address"  : "54  New Malinee C.h.s., Mumbai",
+    "comments" : ""
+  },
+  {
+    "id"       : "6",
+    "firstname": "Bhaga",
+    "lastname" : "Arya",
+    "email"    : "bhagaarya@gmail.com",
+    "password" : "9966012923",
+    "contact"  : "02223415025",
+    "address"  : "125, Grd Flr, Sugar House, Mumbai",
+    "comments" : ""
+  },
+  {
+    "id"       : "7",
+    "firstname": "Aja",
+    "lastname" : "Dasgupta",
+    "email"    : "ajadasgupta@gmail.com",
+    "password" : "9966012923",
+    "contact"  : "04066326463",
+    "address"  : "36 , R P Road, hyderabad",
+    "comments" : ""
+  },
+  {
+    "id"       : "8",
+    "firstname": "Devika",
+    "lastname" : "Sonde",
+    "email"    : "devikasonde@gmail.com",
+    "password" : "9966012923",
+    "contact"  : "23341918",
+    "address"  : "49, delhi",
+    "comments" : ""
+  },
+  {
+    "id"       : "9",
+    "firstname": "Srilekha",
+    "lastname" : "Chacko",
+    "email"    : "srilekhachacko@gmail.com",
+    "password" : "9966012923",
+    "contact"  : "01124691593",
+    "address"  : "E 78, Part 1, South Extn, delhi",
+    "comments" : ""
+  },
+  {
+    "id"       : "10",
+    "firstname": "Vasin",
+    "lastname" : "Chaudhari",
+    "email"    : "vasinchaudhari@gmail.com",
+    "password" : "9966012923",
+    "contact"  : "02227450821",
+    "address"  : "Panvel, Navi Mumbai",
+    "comments" : ""
+  },
+  {
+    "id"       : "11",
+    "firstname": "Purdy",
+    "lastname" : "Sachar",
+    "email"    : "purdysachar@gmail.com",
+    "password" : "9966012923",
+    "contact"  : "09343322744",
+    "address"  : " Shimoga, karnataka",
+    "comments" : ""
+  },
+  {
+    "id"       : "12",
+    "firstname": "Hari",
+    "lastname" : "Dey",
+    "email"    : "haridey@gmail.com",
+    "password" : "9966012923",
+    "contact"  : "02223726128",
+    "address"  : "mumbai",
+    "comments" : ""
+  },
+  {
+    "id"       : "13",
+    "firstname": "Hemanth",
+    "lastname" : "deshaveni",
+    "email"    : "hemanthdeshaveni@gmail.com",
+    "password" : "9966012923",
+    "contact"  : "9867968439",
+    "address"  : "Hyderabad",
+    "comments" : ""
+  },
+  {
+    "id"       : "14",
+    "firstname": "Gaurav",
+    "lastname" : "Chowdary",
+    "email"    : "gauravchowdary@gmail.com",
+    "contact"  : "9912991988",
+    "address"  : "Hyderabad",
+    "comments" : ""
+  },
+  {
+    "id"       : "15",
+    "firstname": "Rajendar",
+    "lastname" : "kadapala",
+    "email"    : "rajendarsrk@gmail.com",
+    "password" : "9966012923",
+    "contact"  : "8142264211",
+    "address"  : "Hyderabad",
+    "comments" : ""
+  }
+]

@@ -1,0 +1,12 @@
+[
+    {
+        "id"       : "1",
+        "firstname": "Rakesh",
+        "lastname" : "kokkula",
+        "email"    : "rk@gmail.com",
+        "password" : "99660",
+        "contact"  : "9966012923",
+        "address"  : "4-1-140, vani nagar, Jagtial",
+        "comments" : ""
+      }
+]

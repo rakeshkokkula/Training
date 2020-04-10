@@ -9,7 +9,8 @@ const Screens = {
     Home:Main,
     RegistrationForm:ContactUs,
     List:ViewList,
-    Counter:Apps
+    Counter:Apps,
+    
 }
 
 const HomeStack = createStackNavigator(Screens);
