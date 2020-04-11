@@ -39,8 +39,9 @@ class Admin extends React.Component {
           </tr>
       
       {PostData.map((item, index) => {
+        if(item.id != 0){
           return(
-        <tr>
+        <tr key={item.id}>
           <td>{item.id}</td>                        
           <td>{item.firstname} {item.lastname}</td>
           <td>{item.email}</td>
@@ -51,6 +52,7 @@ class Admin extends React.Component {
         </tr>
         )
         }
+      }
         )}
     </table>
       

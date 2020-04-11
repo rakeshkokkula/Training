@@ -1,7 +1,7 @@
 import React from 'react';
 import './head.css'
-import StudentData from './assets/data.json'
-import AdminData from './assets/admin.json'
+import loginData from './assets/data.json'
+// import AdminData from './assets/admin.json'
 import { Redirect } from 'react-router-dom'
 
 
@@ -16,7 +16,10 @@ class Login extends React.Component{
             password: "",
             AloggedIn ,
             SloggedIn ,
-            Admin:[]
+            Admin:[],
+            Student:[],
+            EmailErr:"",
+            passwordErr:""
               
          }
         this.onChange = this.onChange.bind(this)
@@ -29,50 +32,63 @@ class Login extends React.Component{
             [e.target.name]: e.target.value
         })
     }
-    submitForm(e){
-        e.preventDefault()
-        {AdminData.map((item, index) => {
-        const { email, password } = this.state
-        if(email === item.email && password === item.password ){
-            const data = [item.Id]
-            data.push(data)
-            localStorage.setItem("token", "fsdfsdfrg")
-            this.setState({
-                AloggedIn:true,
+submitForm(e){
+            e.preventDefault()
+            {loginData.map((item, index) => {
+            const { email, password } = this.state
+        if(email === item.email){
+            
+                if(email === item.email && password === item.password && "student" === item.role){
+                localStorage.setItem("token", "fsdfsdfrg")
+                this.setState({
+                    SloggedIn:true,
+                    Student:item.id
+                })
                 
+                }
+                else if(email === item.email && password === item.password && "admin" === item.role){
+                localStorage.setItem("token", "fsdfsdfrg")
+                this.setState({
+                    AloggedIn:true,
+                    Admin:item.id
+                })
+                
+                }
+                else{
+                    this.setState({
+                        EmailErr : "" ,
+                        passwordErr:"Invalid password"
+                    })
+                   
+                }
+        }
+        else if(email !== item.email && password === item.password){
+            this.setState({
+                EmailErr : "Invalid Email Id" ,
+                passwordErr: ""
             })
+           
+        }
+        else{
+            this.setState({
+                EmailErr : "Invalid Email Id" ,
+                passwordErr:'Invalid Password'
+            })
+            
         }
         
     })
 }
-    {StudentData.map((item, index) => {
-    const { email, password } = this.state
-    let data = []
-        if(email === item.email && password === item.password){
-            localStorage.setItem("token", "kjdchjdskjscds")
-            data.push(item.id)
-            this.setState({
-                SloggedIn:true,
-                Admin:item.id
-            })
-        }
-        console.log(data)
-        return data
-        
-    })
-    }
-        
-
 }
 
 
     render(){
         if(this.state.AloggedIn){
-            return <Redirect to={`/admin/${this.state.data}`} />
+            return <Redirect to={`/admin/${this.state.Admin}`} />
             
         }
        else if(this.state.SloggedIn){
-            return <Redirect to={`/student/${this.state.Admin}`} />
+            return <Redirect to={`/student/${this.state.Student}`} />
         }
         return(
         <div className="Login">
@@ -82,8 +98,10 @@ class Login extends React.Component{
                 <h1 className='text'>Login</h1>
 		            <label>Email: </label>
 		            <input className="formField" type="email" name="email" value={this.state.email} onChange={this.onChange} placeholder='e.g: user@gmail.com' required /><br/>
+                    <div className="EmailErr">{this.state.EmailErr}</div>
                     <label>Password: </label>
 		            <input className="formField" type="password" name="password" value={this.state.password} onChange={this.onChange} placeholder="Password" required /><br/>
+                    <div className="EmailErr">{this.state.passwordErr}</div>
                     <button type="submit" className='myButton' >Login</button>
                 </form>
             </div>

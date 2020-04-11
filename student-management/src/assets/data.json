@@ -1,4 +1,15 @@
-[
+
+[{
+  "id"       : "0",
+  "firstname": "Rakesh",
+  "lastname" : "kokkula",
+  "email"    : "rk@gmail.com",
+  "password" : "99660",
+  "contact"  : "9966012923",
+  "address"  : "4-1-140, vani nagar, Jagtial",
+  "comments" : "",
+  "role"     : "admin"
+},
   {
     "id"       : "1",
     "firstname": "Rakesh",
@@ -8,7 +19,7 @@
     "contact"  : "9966012923",
     "address"  : "4-1-140, vani nagar, Jagtial",
     "comments" : "",
-    "role"     : "admin"
+    "role"     : "student"
   },
   {
     "id"       : "2",
@@ -29,7 +40,8 @@
     "password" : "9966012923",
     "contact"  : "8801000623",
     "address"  : "4-1-140, vani nagar, Jagtial",
-    "comments" : ""
+    "comments" : "",
+    "role"     : "student"
   },
   {
     "id"       : "4",
@@ -39,7 +51,8 @@
     "password" : "9966012923",
     "contact"  : "9494992446",
     "address"  : "4-1-140, vani nagar, Jagtial",
-    "comments" : ""
+    "comments" : "",
+    "role"     : "student"
   },
   {
     "id"       : "5",
@@ -49,7 +62,8 @@
     "password" : "9966012923",
     "contact"  : "02228254144",
     "address"  : "54  New Malinee C.h.s., Mumbai",
-    "comments" : ""
+    "comments" : "",
+    "role"     : "student"
   },
   {
     "id"       : "6",
@@ -59,7 +73,8 @@
     "password" : "9966012923",
     "contact"  : "02223415025",
     "address"  : "125, Grd Flr, Sugar House, Mumbai",
-    "comments" : ""
+    "comments" : "",
+    "role"     : "student"
   },
   {
     "id"       : "7",
@@ -69,7 +84,8 @@
     "password" : "9966012923",
     "contact"  : "04066326463",
     "address"  : "36 , R P Road, hyderabad",
-    "comments" : ""
+    "comments" : "",
+    "role"     : "student"
   },
   {
     "id"       : "8",
@@ -79,7 +95,8 @@
     "password" : "9966012923",
     "contact"  : "23341918",
     "address"  : "49, delhi",
-    "comments" : ""
+    "comments" : "",
+    "role"     : "student"
   },
   {
     "id"       : "9",
@@ -89,7 +106,8 @@
     "password" : "9966012923",
     "contact"  : "01124691593",
     "address"  : "E 78, Part 1, South Extn, delhi",
-    "comments" : ""
+    "comments" : "",
+    "role"     : "student"
   },
   {
     "id"       : "10",
@@ -99,7 +117,8 @@
     "password" : "9966012923",
     "contact"  : "02227450821",
     "address"  : "Panvel, Navi Mumbai",
-    "comments" : ""
+    "comments" : "",
+    "role"     : "student"
   },
   {
     "id"       : "11",
@@ -109,7 +128,8 @@
     "password" : "9966012923",
     "contact"  : "09343322744",
     "address"  : " Shimoga, karnataka",
-    "comments" : ""
+    "comments" : "",
+    "role"     : "student"
   },
   {
     "id"       : "12",
@@ -119,7 +139,8 @@
     "password" : "9966012923",
     "contact"  : "02223726128",
     "address"  : "mumbai",
-    "comments" : ""
+    "comments" : "",
+    "role"     : "student"
   },
   {
     "id"       : "13",
@@ -129,7 +150,8 @@
     "password" : "9966012923",
     "contact"  : "9867968439",
     "address"  : "Hyderabad",
-    "comments" : ""
+    "comments" : "",
+    "role"     : "student"
   },
   {
     "id"       : "14",
@@ -138,7 +160,8 @@
     "email"    : "gauravchowdary@gmail.com",
     "contact"  : "9912991988",
     "address"  : "Hyderabad",
-    "comments" : ""
+    "comments" : "",
+    "role"     : "student"
   },
   {
     "id"       : "15",
@@ -148,6 +171,7 @@
     "password" : "9966012923",
     "contact"  : "8142264211",
     "address"  : "Hyderabad",
-    "comments" : ""
+    "comments" : "",
+    "role"     : "student"
   }
 ]
