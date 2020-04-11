@@ -29,7 +29,7 @@ class Student extends React.Component{
               if(id === item.id){
                   return(
                   <>
-                  <h3>Welcome: {item.firstname} {item.lastname}</h3>
+                 
           <Link to='/logout'><button className='myButton btn'>Logout</button></Link>
           <hr />
           <h1 className="text">Your details</h1>

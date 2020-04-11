@@ -36,7 +36,7 @@ submitForm(e){
             e.preventDefault()
             {loginData.map((item, index) => {
             const { email, password } = this.state
-        if(email === item.email){
+        if(email.length > 0 && password.length > 0){
             
                 if(email === item.email && password === item.password && "student" === item.role){
                 localStorage.setItem("token", "fsdfsdfrg")
@@ -47,35 +47,43 @@ submitForm(e){
                 
                 }
                 else if(email === item.email && password === item.password && "admin" === item.role){
-                localStorage.setItem("token", "fsdfsdfrg")
+                localStorage.setItem("token", "vghvhvhjh")
                 this.setState({
                     AloggedIn:true,
                     Admin:item.id
                 })
                 
                 }
-                else{
+                else if(email !== item.email && password === item.password){
+                    this.setState({
+                        EmailErr : "Invalid Email Id" ,
+                        passwordErr: ""
+                    })
+                   
+                }
+               else if(email === item.email && password !== item.password){
                     this.setState({
                         EmailErr : "" ,
                         passwordErr:"Invalid password"
                     })
                    
                 }
-        }
-        else if(email !== item.email && password === item.password){
-            this.setState({
-                EmailErr : "Invalid Email Id" ,
-                passwordErr: ""
-            })
-           
+               else{
+                    this.setState({
+                        EmailErr : "Invalid Email Id" ,
+                        passwordErr:'Invalid Password'
+                    })
+                    
+                }
         }
         else{
             this.setState({
-                EmailErr : "Invalid Email Id" ,
-                passwordErr:'Invalid Password'
+                EmailErr : "Please enter email id" ,
+                passwordErr:'Please enter Password'
             })
-            
         }
+        
+        
         
     })
 }
