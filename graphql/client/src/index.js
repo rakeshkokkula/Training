@@ -1,14 +1,16 @@
-import React, {Component} from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
 import * as serviceWorker from './serviceWorker';
 import App from './App'
 import UpdateBook from './components/UpdateBook'
+import UpdateAuthors from './components/UpdateAuthor'
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import ApolloClient from 'apollo-boost';
 import { ApolloProvider } from "@apollo/react-hooks"
-import AddBooks from './AddBooks';
+
 import GetData from './components/GetData'
 import AddAuthor from './components/AddAuthor'
+
 
 const client = new ApolloClient({
   uri: 'http://localhost:4000',
@@ -22,6 +24,7 @@ ReactDOM.render(
        <Switch>
         <Route exact path="/" component={App} />
         <Route path="/Update" component={UpdateBook} />
+        <Route path="/Author" component={UpdateAuthors} />
         <Route path="/GetData" component={GetData} />
         <Route path="/AddAuthor" component={AddAuthor} />
         

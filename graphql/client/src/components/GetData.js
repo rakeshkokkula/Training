@@ -52,6 +52,7 @@ function Books() {
                         
                     },
                     refetchQueries: [{query: getBooksQuery}]
+                    
                 }).catch(error => {
                     alert("Cannot delete this Student");
                   });
@@ -84,8 +85,8 @@ function Books() {
       <tr>
         <th>ID</th>
         <th>Name</th>
-        <th>Genre</th>
-        <th>AuthorId</th>
+        <th>Age</th>
+        
       </tr>
     </thead>
     {data.authors.map(author => (
@@ -93,9 +94,8 @@ function Books() {
       <tr key={author.id}>
       <td>{author.id}</td>
     <td>{author.name}</td>
-    <td>{author.genre}</td>
-    <td>{author.authorId}</td>
-    <td><Link to={{pathname:`/Update/${author.id}`, id:author.id}}>  <button
+    <td>{author.age}</td>
+    <td><Link to={{pathname:`/Author/${author.id}`, id:author.id}}>  <button
             className="edit" 
             ><img alt="edit" src="https://img.icons8.com/cute-clipart/20/000000/edit.png"/></button></Link></td>
     <td><button 

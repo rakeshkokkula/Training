@@ -47,15 +47,27 @@ function UpdateBooks() {
           updateBook().catch(error => {
             console.log(error);
           });
-
-          setName(name);
-          setGenre(genre);
-          setAuthorId(authorId)
+          setId(book.id);
+          if(name == ""){
+            setName(book.name);
+          }else{
+            setName(name);
+          }
+          if(genre == ""){
+            setGenre(book.genre);
+          }else{
+            setGenre(genre);
+          }
+          if(authorId == ""){
+            setAuthorId(book.authorId);
+          }else{
+            setAuthorId(authorId);
+          }
           
         }} className="myForm">
                 <h1 className='text'>Book Update</h1>
                 <label>Id</label>
-		            <input className="formField" type="number" name="id" defaultValue={book.id} onClick={e => setId(e.target.value)} required /><br/>
+		            <input className="formField" type="number" name="id" defaultValue={book.id} disabled required /><br/>
 		            <label>Book Name</label>
 		            <input className="formField" type="text" name="name" defaultValue={book.name}  onChange={e => setName(e.target.value)} placeholder='Enter a Book name' required /><br/>
                     
