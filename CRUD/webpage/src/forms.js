@@ -127,8 +127,8 @@ class Form extends React.Component {
 </form>
 <hr/>
       <h2>Name:{this.state.name}</h2>
-      <Link to="/getData"><button className="btn btn-success" style={{margin:'15px',width:'100px'}}
-  >GET</button></Link>
+      <Link to="/getData"><button className="btn btn-success" style={{margin:'15px',width:'100px'}}>
+      GET</button></Link>
   <div>{this.users}</div>
 </div>
 </div>
