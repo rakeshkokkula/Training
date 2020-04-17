@@ -15,7 +15,7 @@ type Book {
     id: ID!
     name: String!
     genre: String!
-    authorId:ID!
+    authorname: String!
     author: Author
   }
   type Author {
@@ -36,10 +36,10 @@ type Book {
     deleteAuthor(id: ID!) : Boolean
     updateAuthor(id:ID!, name:String,
         age: Int) : Boolean
-    createBook(name: String!, genre: String!, authorId: ID!): Book
+    createBook(name: String!, genre: String!, authorname: String!): Book
     deleteBook(id: ID!) : Boolean
     updateBook(id:ID!, name:String,
-        genre: String, authorId: ID) : Boolean
+        genre: String, authorname: String) : Boolean
   }
   
 `
@@ -72,11 +72,11 @@ const resolvers = {
                 .insert({ name, age });
             return author.results
         },
-        createBook: async(_,{name, genre, authorId }) =>{
+        createBook: async(_,{name, genre, authorname }) =>{
             // console.log("name: ", name)
             const [book] = await knex("books")
                 // .returning("*")
-                .insert({ name, genre,authorId });
+                .insert({ name, genre, authorname });
             return book.results;
           },
           deleteBook: async(_,{id}) => {
@@ -85,10 +85,10 @@ const resolvers = {
               .del();
             return isDeleted
           },
-          updateBook: async(_, {id, name, genre, authorId}) =>{
+          updateBook: async(_, {id, name, genre, authorname}) =>{
             const isUpdated = await knex("books")
             .where({id})
-            .update({name, genre, authorId});
+            .update({name, genre, authorname});
             return isUpdated
           },
           deleteAuthor: async(_,{id}) => {

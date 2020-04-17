@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import Header from './Header'
-import AddBooks from './AddBooks'
+import AddBook from './AddBooks'
 
 
 export default class App extends Component {
@@ -8,7 +8,7 @@ export default class App extends Component {
         return (
             <div>
                 <Header />
-                <AddBooks />
+                <AddBook />
             </div>
         )
     }

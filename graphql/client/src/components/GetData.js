@@ -27,7 +27,8 @@ function Books() {
         <th>ID</th>
         <th>Name</th>
         <th>Genre</th>
-        <th>AuthorId</th>
+        <th>Author Name</th>
+        
       </tr>
     </thead>
     {data.books.map(book => (
@@ -36,7 +37,8 @@ function Books() {
       <td>{book.id}</td>
     <td>{book.name}</td>
     <td>{book.genre}</td>
-    <td>{book.authorId}</td>
+    <td>{book.authorname}</td>
+    
     <td><Link to={{pathname:`/Update/${book.id}`, id:book.id}}>  <button
             className="edit" 
             ><img alt="edit" src="https://img.icons8.com/cute-clipart/14/000000/edit.png"/></button></Link></td>

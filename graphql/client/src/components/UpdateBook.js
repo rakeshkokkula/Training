@@ -6,19 +6,36 @@ import { useMutation } from "@apollo/react-hooks";
 import Header from '../Header';
 
 
+ function DisplayAuthors(){
+  const { loading, error, data } = useQuery(getAuthorsQuery);
+  if(loading){
+      return( <option disabled>Loading authors</option> );
+  }
+  if(error) return `Error! ${error.message}`; 
+
+  else {
+    return data.authors.map(author => {
+        return( <option key={ author.id } value={author.name}>{ author.name }</option> );
+    });
+}
+}
+
+
+
+
 function UpdateBooks() {
-    
+
     const { loading, error, data } = useQuery(getBooksQuery);
     const [id, setId] = useState("");
     const [name, setName] = useState("");
     const [genre, setGenre] = useState("");
-    const [authorId, setAuthorId] = useState("");
+    const [authorname, setAuthorname] = useState("");
     const [updateBook] = useMutation(updateBookMutation, {
         variables: {
           id: id,
           name: name,
           genre:genre,
-          authorId: authorId,
+          authorname: authorname,
           
         },
         refetchQueries: [{query: getBooksQuery}]
@@ -58,24 +75,27 @@ function UpdateBooks() {
           }else{
             setGenre(genre);
           }
-          if(authorId == ""){
-            setAuthorId(book.authorId);
+          if(authorname == ""){
+            setAuthorname(book.authorname);
           }else{
-            setAuthorId(authorId);
+            setAuthorname(authorname);
           }
           
         }} className="myForm">
+
+          
                 <h1 className='text'>Book Update</h1>
-                <label>Id</label>
-		            <input className="formField" type="number" name="id" defaultValue={book.id} disabled required /><br/>
 		            <label>Book Name</label>
 		            <input className="formField" type="text" name="name" defaultValue={book.name}  onChange={e => setName(e.target.value)} placeholder='Enter a Book name' required /><br/>
                     
                     <label>Genre</label>
 		            <input className="formField" type="text" name="genre" defaultValue={book.genre} onChange={e => setGenre(e.target.value)} placeholder="Genre" required /><br/>
-                    <label>AuthorId</label>
-		            <input className="formField" type="number" name="authorId" defaultValue={book.authorId} onChange={e => setAuthorId(e.target.value)} placeholder="authorId" required /><br/>
-                    
+                    <label>Author</label>
+		           
+                <select name="authorname" className="formField" defaultValue={book.authorname}  onChange={ (e) => setAuthorname( e.target.value ) } >
+                        <option>Select author</option>
+                        <DisplayAuthors />
+                    </select>   
                
                     <button type="submit" className='myButton' >Update</button>
                 </form>

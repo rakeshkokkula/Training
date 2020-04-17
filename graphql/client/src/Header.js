@@ -10,7 +10,7 @@ class Header extends React.Component{
             <div className="header">
             <div className="row top">
                 <div className="col-sm-12 col-12">
-                <nav class="navbar navbar-inverse">
+                <nav className="navbar navbar-inverse">
   <div className="container-fluid">
     <div className="navbar-header">
       <a className="navbar-brand" href="#">CourseQue</a>
