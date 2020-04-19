@@ -12,6 +12,11 @@ class Header extends React.Component{
                 <div className="col-sm-12 col-12">
                 <nav className="navbar navbar-inverse">
   <div className="container-fluid">
+  
+      <a className="navbar-brand" href="#">
+      <img alt="logo" src="https://img.icons8.com/doodle/48/000000/books.png"/>
+      </a>
+   
     <div className="navbar-header">
       <a className="navbar-brand" href="#">CourseQue</a>
     </div>
@@ -23,9 +28,9 @@ class Header extends React.Component{
     </ul>
     <form className="navbar-form navbar-left" action="#">
       <div className="form-group">
-        <input type="text" class="form-control" placeholder="Search" name="search" />
+        <input type="text" className="form-control" placeholder="Search" name="search" />
       </div>
-      <button type="submit" class="btn btn-default">Submit</button>
+      <button type="submit" className="btn btn-default">Submit</button>
     </form>
   </div>
 </nav>

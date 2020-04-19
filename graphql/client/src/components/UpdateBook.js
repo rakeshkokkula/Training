@@ -86,7 +86,7 @@ function UpdateBooks() {
           
                 <h1 className='text'>Book Update</h1>
 		            <label>Book Name</label>
-		            <input className="formField" type="text" name="name" defaultValue={book.name}  onChange={e => setName(e.target.value)} placeholder='Enter a Book name' required /><br/>
+		            <input className="formField" type="text" name="name" value={book.name}  onChange={e => setName(e.target.value)} placeholder='Enter a Book name' required /><br/>
                     
                     <label>Genre</label>
 		            <input className="formField" type="text" name="genre" defaultValue={book.genre} onChange={e => setGenre(e.target.value)} placeholder="Genre" required /><br/>

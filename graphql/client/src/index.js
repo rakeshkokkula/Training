@@ -10,6 +10,7 @@ import { ApolloProvider } from "@apollo/react-hooks"
 
 import GetData from './components/GetData'
 import AddAuthor from './components/AddAuthor'
+import Reuse from './components/reuse';
 
 
 const client = new ApolloClient({
@@ -27,6 +28,7 @@ ReactDOM.render(
         <Route path="/Author" component={UpdateAuthors} />
         <Route path="/GetData" component={GetData} />
         <Route path="/AddAuthor" component={AddAuthor} />
+        <Route path="/Reuse" component={Reuse} />
         
       </Switch>
       </BrowserRouter>

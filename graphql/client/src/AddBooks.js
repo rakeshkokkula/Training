@@ -2,10 +2,33 @@ import React, { useState } from 'react';
 import './App.css'
 import {addBookMutation, getBooksQuery, getAuthorsQuery } from './components/queries';
 import {useQuery} from "@apollo/react-hooks";
-// import { graphql } from 'react-apollo';
-// import { compose } from 'recompose';
 import { useMutation } from "@apollo/react-hooks";
 
+
+
+// function MyInput(props){
+//   return(
+//     <div>
+//       <input type={props.type} name={props.name} value={props.value}  />
+//     </div>
+//   )
+// }
+
+
+// function Add(props) {
+//   event.preventDefault();
+//   createBook().catch(error => {
+//     console.log(error);
+//   });
+
+//   setName(props.name);
+//   setGenre(props.genre);
+//   setAuthorname(props.authorname)
+//   // console.log(name)
+//   // console.log(genre)
+//   // console.log(authorname)
+  
+// }
 
 function AddBook(){
     const {loading, error, data } = useQuery(getAuthorsQuery);
@@ -24,6 +47,8 @@ function AddBook(){
       if (loading) 
     return <h3>Loading...</h3>
     if (error) return `Error! ${error.message}`;
+
+    
     
     return(
         <div className="AddBook">

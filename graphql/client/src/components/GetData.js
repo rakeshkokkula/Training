@@ -39,29 +39,27 @@ function Books() {
     <td>{book.genre}</td>
     <td>{book.authorname}</td>
     
-    <td><Link to={{pathname:`/Update/${book.id}`, id:book.id}}>  <button
-            className="edit" 
-            ><img alt="edit" src="https://img.icons8.com/cute-clipart/14/000000/edit.png"/></button></Link></td>
-    <td><button 
-            onClick={e => {
-                e.preventDefault();
-                
-                    console.log(book.id)
-                deleteABook({
-                    
-                    variables:{
-                        id: book.id
-                        
-                    },
-                    refetchQueries: [{query: getBooksQuery}]
-                    
-                }).catch(error => {
-                    alert("Cannot delete this Student");
-                  });
-            }}
-            className="del" >
-                <img alt="del" src="https://img.icons8.com/flat_round/14/000000/delete-sign.png" />
-                </button> </td>
+    <td><Link to={{pathname:`/Update/${book.id}`, id:book.id}}>  <img alt="edit" src="https://img.icons8.com/cute-clipart/28/000000/edit.png"/></Link></td>
+    <td>
+                <img
+                 onClick={e => {
+                  e.preventDefault();
+                  
+                      console.log(book.id)
+                  deleteABook({
+                      
+                      variables:{
+                          id: book.id
+                          
+                      },
+                      refetchQueries: [{query: getBooksQuery}]
+                      
+                  }).catch(error => {
+                      alert("Cannot delete this Student");
+                    });
+              }}
+                alt="del" src="https://img.icons8.com/color/28/000000/delete-forever.png" />
+                 </td>
                 
       </tr>
     </tbody>
@@ -97,28 +95,26 @@ function Books() {
       <td>{author.id}</td>
     <td>{author.name}</td>
     <td>{author.age}</td>
-    <td><Link to={{pathname:`/Author/${author.id}`, id:author.id}}>  <button
-            className="edit" 
-            ><img alt="edit" src="https://img.icons8.com/cute-clipart/20/000000/edit.png"/></button></Link></td>
-    <td><button 
-            onClick={e => {
-                e.preventDefault();
-                
-                    console.log(author.id)
-                    deleteAuthor({
-                    
-                    variables:{
-                        id: author.id
-                        
-                    },
-                    refetchQueries: [{query: getAuthorsQuery}]
-                }).catch(error => {
-                    alert("Cannot delete this Student");
-                  });
-            }}
-            className="del" >
-                <img alt="del" src="https://img.icons8.com/flat_round/20/000000/delete-sign.png" />
-                </button> </td>
+    <td><Link to={`/Author/${author.id}`}><img alt="edit" src="https://img.icons8.com/cute-clipart/28/000000/edit.png"/></Link></td>
+    <td>
+        <img 
+        onClick={e => {
+          e.preventDefault();
+          
+              console.log(author.id)
+              deleteAuthor({
+              
+              variables:{
+                  id: author.id
+                  
+              },
+              refetchQueries: [{query: getAuthorsQuery}]
+          }).catch(error => {
+              alert("Cannot delete this Student");
+            });
+      }}
+        alt="del" src="https://img.icons8.com/color/28/000000/delete-forever.png" />
+      </td>
                 
       </tr>
     </tbody>
