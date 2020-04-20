@@ -1,5 +1,5 @@
 import React from 'react'
-import Header from '../Header';
+// import Header from '../Header';
 import {useQuery} from "@apollo/react-hooks";
 import { getAuthorsQuery } from './queries';
 
@@ -23,7 +23,7 @@ function DisplayAuthors(){
 function Books(props){
     return(
        <div >
-            <Header />
+            
             <div className='col-sm-12 author'>
         <form name = "myForm" onSubmit={props.onSubmit} className="myForm">          
         <h1 className='text'>{props.title}</h1>

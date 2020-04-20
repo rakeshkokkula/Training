@@ -4,7 +4,7 @@ import { getBooksQuery, updateBookMutation, addBookMutation } from './queries';
 import "../App.css"
 import { useMutation } from "@apollo/react-hooks";
 import Books from './Books'
-
+import Header from '../Header'
 
 
 function UpdateBooks(props) {
@@ -38,7 +38,7 @@ function UpdateBooks(props) {
       console.log(name)
       console.log(genre)
       console.log(authorname)
-      
+      alert("Book Added")
     }
 
     const [updateBook] = useMutation(updateBookMutation, {
@@ -60,7 +60,7 @@ function UpdateBooks(props) {
     return (
     
     <div>
-           
+           <Header />
            {props.page == "add" &&
             <Books
             setName = {setName}
@@ -100,7 +100,7 @@ function UpdateBooks(props) {
                 }else{
                   setAuthorname(authorname);
                 }
-                
+                alert("Book Updated")
               }   
               
             return(
