@@ -155,7 +155,15 @@ export default class Reuse extends Component {
 
 
     render() {
-
+ // const [updateAuthor] = useMutation(updateAuthorMutation, {
+        //   variables: {
+        //     id: this.state.id,
+        //     name: this.state.name,
+        //     age: this.state.age
+            
+        //   },
+        //   refetchQueries: [{query: getAuthorsQuery}]
+        // });
         
         
         return (

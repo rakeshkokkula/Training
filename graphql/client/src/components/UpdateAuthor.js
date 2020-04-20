@@ -1,84 +1,113 @@
 import React, {useState} from 'react'
 import {useQuery} from "@apollo/react-hooks";
-import { getAuthorsQuery, updateAuthorMutation, } from './queries';
+import { getAuthorsQuery, updateAuthorMutation, addAuthorMutation } from './queries';
 import "../App.css"
 import { useMutation } from "@apollo/react-hooks";
-import Header from '../Header';
+import Authors from './Authors'
 
 
-function UpdateAuthors() {
-    
-    const { loading, error, data } = useQuery(getAuthorsQuery);
-    const [id, setId] = useState("");
+function UpdateAuthors(props){
+
+      const [id, setId] = useState("");
     const [name, setName] = useState("");
     const [age, setAge] = useState("");
     
-    const [updateAuthor] = useMutation(updateAuthorMutation, {
-        variables: {
-          id: id,
-          name: name,
-          age: age
-          
-        },
-        refetchQueries: [{query: getAuthorsQuery}]
-      });
       
-    
+   
+
+    const addForm = (e)=> {
+      e.preventDefault();
+      addAuthor().catch(error => {
+        console.log(error);
+      });
+          setName(name);
+          setAge(parseInt(age));
+        
+      
+    }
+      
+        const [addAuthor] = useMutation(addAuthorMutation, {
+          variables: {
+            name: name,
+            age: age
+            
+          },
+          refetchQueries: [{query: getAuthorsQuery}]
+        });
+
+        const [updateAuthor] = useMutation(updateAuthorMutation, {
+          variables: {
+            id: id,
+            name: name,
+            age: age
+            
+          },
+          refetchQueries: [{query: getAuthorsQuery}]
+        });
+
+    const { loading, error, data } = useQuery(getAuthorsQuery);
+
     if (loading) 
     return <h3>Loading...</h3>
-    if (error) return `Error! ${error.message}`;
-    
-    return (
-    
-    <div className="update">
-            <Header />
-        <div className='col-sm-12 author'>
-        {data.authors.map(author =>{ 
-           
-           let path = window.location.pathname
-             let id = path.slice(8)
+    if (error) return `Error! ${error.message}`;    
+        return(
+          <div>
+            {props.page == "add" &&
+            <Authors
+            setName = {setName}
+            setAge = {setAge}
+            onSubmit = {addForm}
+            button = "Add"
+            title = "Add Author"
+            name = {name}
+            age = {age}
+            />
+          }
+          {props.page == "update" &&
+          data.authors.map(author => {
+           const id = props.match.params.id
             if(id == author.id){
-             
-            return(    
-           
-                <form name = "myForm" onSubmit={event => {
-          event.preventDefault();
-          updateAuthor().catch(error => {
-            console.log(error);
-          });
-          setId(author.id);
-          if(name == ""){
-            setName(author.name);
-          }else{
-            setName(name);
-          }
-          if(age == ""){
-            setAge(author.age);
-          }else{
-            setAge(age);
-          }
-          
-        }} className="myForm">
-                <h1 className='text'>Author Update</h1>
-                <label>Id</label>
-		            <input className="formField" type="number" name="id" defaultValue={author.id} disabled required /><br/>
-		            <label>Author Name</label>
-		            <input className="formField" type="text" name="name" defaultValue={author.name}  onChange={e => setName(e.target.value)} placeholder='Enter a Author name' required /><br/>
-                    
-                    <label>Age</label>
-		            <input className="formField" type="number" name="age" defaultValue={author.id} onChange={e => setAge(e.target.value)} placeholder="Age" required /><br/>
-                   
-               
-                    <button type="submit" className='myButton' >Update</button>
-                </form>
+              const updateForm = (e)=> {
+                e.preventDefault();
+                updateAuthor().catch(error => {
+                  console.log(error);
+                });
+                  setId(author.id);
+                  console.log(id)
+                  if(name == ""){
+                    setName(author.name);
+                  }else{
+                    setName(name);
+                  }
+                  if(age == ""){
+                    setAge(author.age);
+                  }else{
+                    setAge(age);
+                  }
                 
-                )}
-            }
-                )}
-       </div>
-     
-    </div>
-    )
-        }
+              }
+            return(
+              <div>
+                
+            <Authors
+            setName = {setName}
+            setAge = {setAge}
+            onSubmit = {updateForm}
+            button = "Update"
+            title = "Update Author"
+            name = {author.name}
+            age = {author.age}
+            />
+          
+                </div>
+            )}
+          })}
+          
+          
+            
+          </div>
+        )
+      
+    }
 
 export default UpdateAuthors

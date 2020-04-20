@@ -1,16 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import * as serviceWorker from './serviceWorker';
 import App from './App'
-import UpdateBook from './components/UpdateBook'
-import UpdateAuthors from './components/UpdateAuthor'
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import ApolloClient from 'apollo-boost';
 import { ApolloProvider } from "@apollo/react-hooks"
 
-import GetData from './components/GetData'
-import AddAuthor from './components/AddAuthor'
-import Reuse from './components/reuse';
 
 
 const client = new ApolloClient({
@@ -23,13 +17,7 @@ ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
        <Switch>
-        <Route exact path="/" component={App} />
-        <Route path="/Update" component={UpdateBook} />
-        <Route path="/Author" component={UpdateAuthors} />
-        <Route path="/GetData" component={GetData} />
-        <Route path="/AddAuthor" component={AddAuthor} />
-        <Route path="/Reuse" component={Reuse} />
-        
+          <App />
       </Switch>
       </BrowserRouter>
   </React.StrictMode>

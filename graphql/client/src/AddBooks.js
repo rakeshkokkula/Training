@@ -3,6 +3,7 @@ import './App.css'
 import {addBookMutation, getBooksQuery, getAuthorsQuery } from './components/queries';
 import {useQuery} from "@apollo/react-hooks";
 import { useMutation } from "@apollo/react-hooks";
+import Header from './Header'
 
 
 
@@ -97,6 +98,16 @@ function AddBook(){
 
 
 
+class AddBooks extends React.Component {
+  render() {
+      return (
+          <div>
+              <Header />
+              <AddBook />
+          </div>
+      )
+  }
+}
 
- export default AddBook
+ export default AddBooks
  

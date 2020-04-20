@@ -19,9 +19,9 @@ type Book {
     author: Author
   }
   type Author {
-    id: Int!
+    id: ID!
     name: String!
-    age:Int!
+    age:ID!
     books: [Book!]!
   }
   type Query {
@@ -32,10 +32,10 @@ type Book {
   }
 
   type Mutation {
-    createAuthor(name: String!, age: Int!): Author
+    createAuthor(name: String!, age: ID!): Author
     deleteAuthor(id: ID!) : Boolean
     updateAuthor(id:ID!, name:String,
-        age: Int) : Boolean
+        age: ID) : Boolean
     createBook(name: String!, genre: String!, authorname: String!): Book
     deleteBook(id: ID!) : Boolean
     updateBook(id:ID!, name:String,

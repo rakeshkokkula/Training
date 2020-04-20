@@ -39,7 +39,7 @@ function Books() {
     <td>{book.genre}</td>
     <td>{book.authorname}</td>
     
-    <td><Link to={{pathname:`/Update/${book.id}`, id:book.id}}>  <img alt="edit" src="https://img.icons8.com/cute-clipart/28/000000/edit.png"/></Link></td>
+    <td><Link to={`/Update/${book.id}`}>  <img alt="edit" src="https://img.icons8.com/cute-clipart/28/000000/edit.png"/></Link></td>
     <td>
                 <img
                  onClick={e => {
@@ -80,7 +80,7 @@ function Books() {
             <div className="Authors">
                 
                 <h1 className="h">Authors List</h1>
-                <table class="table table-hover tbl">
+                <table className="table table-hover tbl">
     <thead>
       <tr>
         <th>ID</th>
