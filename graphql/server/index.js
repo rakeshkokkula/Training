@@ -16,7 +16,7 @@ type Book {
     name: String!
     genre: String!
     authorname: String!
-    author: Author
+    author: [Author]
   }
   type Author {
     id: ID!
@@ -52,18 +52,23 @@ const resolvers = {
         authors: () => knex("authors").select("*"),
         author : async(_,{id}) =>{ return await knex("authors").where({id}).first().select("*")} ,
       },
-      Book: {
-        author: root => {
-          return Author.findOne({ bookIds: root.id });
+      Book:{
+        author: async(_) => {
+          return await knex("authors").where('id',_.author_Id).select("*")
         }
       },
-      Author: {
-        books: root => {
-          return knex("books")
-            .whereIn("id", root.bookIds)
-            .select("*");
-        }
-    },
+    //   Book: {
+    //     author: root => {
+    //       return Author.findOne({ bookIds: root.id });
+    //     }
+    //   },
+    //   Author: {
+    //     books: root => {
+    //       return knex("books")
+    //         .whereIn("id", root.bookIds)
+    //         .select("*");
+    //     }
+    // },
     Mutation: {
         createAuthor: async (_, { name, age }) => {
             // console.log("name: ", name)

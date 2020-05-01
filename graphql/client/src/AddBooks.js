@@ -60,7 +60,6 @@ function AddBook(){
           createBook().catch(error => {
             console.log(error);
           });
-
           setName(name);
           setGenre(genre);
           setAuthorname(authorname)

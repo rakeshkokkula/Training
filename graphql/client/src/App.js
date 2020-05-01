@@ -16,7 +16,6 @@ export default class App extends Component {
                 <Route exact path="/" render={() => (
                 <UpdateBook
                   page="add"
-                  
                   /> )} />
                 <Route path="/Update/:id" render={(props) => (
                 <UpdateBook
