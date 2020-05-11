@@ -5,7 +5,8 @@ import * as React from 'react';
 // import ContactUs from './Demo/contactUs'
 // import Form from './Demo/Formik'
 // import ReviewForm from './Demo/demo1'
-import Navigator from './CRUD/nav';
+// import Navigator from './CRUD/nav';
+import Navigator from './chatApp/screens';
 // import Apps from './Demo/count'
 
 export default function App() {
